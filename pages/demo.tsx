@@ -437,8 +437,12 @@ console.log("selectedInterviewerQuestions",selectedInterviewerQuestions);
                       <div>
                         {selectedInterviewerQuestions[0].question}
                         <br />
-                        <strong>Video URL:</strong>{" "}
-                        {selectedInterviewerQuestions[0].videoUrl}
+                        <span 
+  onClick={() => window.open(selectedInterviewerQuestions[0].videoUrl, '_blank')}
+  className="text-blue-600 underline cursor-pointer"
+>
+  Video
+</span>
                       </div>
                     ) : (
                       <p>No questions available.</p>
